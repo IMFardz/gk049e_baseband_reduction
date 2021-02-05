@@ -8,8 +8,8 @@ from baseband_tasks.shaping import Reshape
 import traceback
 
 fdir = '/scratch/p/pen/syedfard/B1133/gk049e/e-1133/ar/'
-#fname = sys.argv[1]
-fname = 'gk049e_ar_no0005.m5b'
+name = sys.argv[1]
+#fname = 'gk049e_ar_no0005.m5b'
 output_name = '/scratch/p/pen/syedfard/B1133/gk049e/numpy_arrays/ar' + fname[:-4]
 print("Output File Name: {}".format(output_name))
 
