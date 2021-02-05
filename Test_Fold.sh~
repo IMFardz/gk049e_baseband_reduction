@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#PBS -l nodes=1:ppn=8,walltime=24:00:00
+#PBS -N VDIF_DATA_CONVERSION
+
+cd /scratch/p/pen/syedfard/B1133/gk049c
+
+export OMP_NUM_THREADS=1
+
+module load gnu-parallel/20180322
+module load anaconda3/5.1.0
+
+parallel -j 8 <<EOF
+  cd n1-2; ./convert_to_single_thread_vdif.py /scratch/p/pen/simardda/B1133/gk049c/gb/
+  cd n5-8; ./convert_to_single_thread_vdif.py /scratch/p/pen/simardda/B1133/gk049c/gb/
+  cd n9-13; ./convert_to_single_thread_vdif.py /scratch/p/pen/simardda/B1133/gk049c/gb/
+  cd n14-18; ./convert_to_single_thread_vdif.py /scratch/p/pen/simardda/B1133/gk049c/gb/
+  cd n19-21; ./convert_to_single_thread_vdif.py /scratch/p/pen/simardda/B1133/gk049c/gb/
+  cd n22-25; ./convert_to_single_thread_vdif.py /scratch/p/pen/simardda/B1133/gk049c/gb/
+  cd n26-29; ./convert_to_single_thread_vdif.py /scratch/p/pen/simardda/B1133/gk049c/gb/
+  cd n30-32 ./convert_to_single_thread_vdif.py /scratch/p/pen/simardda/B1133/gk049c/gb/
+EOF

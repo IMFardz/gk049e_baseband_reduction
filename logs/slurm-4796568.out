@@ -1,0 +1,41 @@
+slurmstepd: error: *** JOB 4796568 ON nia1520 CANCELLED AT 2021-02-05T06:39:02 DUE TO TIME LIMIT ***
+
+scontrol show jobid 4796568
+JobId=4796568 JobName=dspsr_test
+   UserId=syedfard(3071563) GroupId=pen(6000082) MCS_label=N/A
+   Priority=500217 Nice=0 Account=rrg-pen-ac QOS=normal
+   JobState=COMPLETING Reason=TimeLimit Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:15
+   RunTime=04:00:23 TimeLimit=04:00:00 TimeMin=N/A
+   SubmitTime=2021-02-04T16:31:41 EligibleTime=2021-02-04T16:31:41
+   AccrueTime=2021-02-04T16:31:41
+   StartTime=2021-02-05T02:38:38 EndTime=2021-02-05T06:39:01 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2021-02-05T02:38:38
+   Partition=compute AllocNode:Sid=nia-login01:179968
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=nia1520
+   BatchHost=nia1520
+   NumNodes=1 NumCPUs=80 NumTasks=40 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   TRES=cpu=80,mem=175G,node=1,billing=40
+   Socks/Node=* NtasksPerN:B:S:C=40:0:*:* CoreSpec=*
+   MinCPUsNode=40 MinMemoryNode=175G MinTmpDiskNode=0
+   Features=[skylake|cascade] DelayBoot=00:00:00
+   OverSubscribe=NO Contiguous=0 Licenses=(null) Network=(null)
+   Command=/gpfs/fs0/scratch/p/pen/syedfard/B1133/gk049e/gk049e_baseband_reduction/Test_Fold.sh
+   WorkDir=/gpfs/fs0/scratch/p/pen/syedfard/B1133/gk049e/gk049e_baseband_reduction
+   StdErr=/gpfs/fs0/scratch/p/pen/syedfard/B1133/gk049e/gk049e_baseband_reduction/slurm-4796568.out
+   StdIn=/dev/null
+   StdOut=/gpfs/fs0/scratch/p/pen/syedfard/B1133/gk049e/gk049e_baseband_reduction/slurm-4796568.out
+   Power=
+   MailUser=syedfard@scinet.local MailType=BEGIN,END,FAIL,REQUEUE,STAGE_OUT
+
+sacct -j 4796568
+       JobID    JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+4796568      dspsr_test rrg-pen-ac   04:00:23                        10:18.223   03:49:00      0:0 
+4796568.bat+      batch rrg-pen-ac   04:00:25   3324068K   2480784K  10:18.223   03:49:00     0:15 
+4796568.ext+     extern rrg-pen-ac   04:00:24    138352K       876K   00:00:00   00:00:00      0:0 
+
+kernel messages produced during job executions:
+[Feb 5 03:23] CIFS PidTable: buckets 64
+[  +0.004567] CIFS BufTable: buckets 64
