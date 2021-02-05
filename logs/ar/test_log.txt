@@ -1,0 +1,53 @@
+Output File Name: /scratch/p/pen/syedfard/B1133/gk049e/numpy_arrays/argk049e_ar_no0005
+Parameters set
+Opened stream reader with sample shape: (2, 2)
+Starting at time: 2019-01-27 06:17:20.000
+Initialized waterfall interpretor with shape: (796, 1024, 2049, 2, 2)
+Starting at time 2019-01-27 06:17:20.000
+reading out output array
+Something went wrong. Likely, you inputted noise or too small of a sample set
+Traceback (most recent call last):
+  File "ar_fold.py", line 51, in <module>
+    output, t = WF.integrate_and_save(count=1)
+  File "/gpfs/fs0/scratch/p/pen/syedfard/B1133/gk049e/gk049e_baseband_reduction/folding_pipeline.py", line 51, in integrate_and_save
+    output = self.integrator.read(count=count)
+  File "/home/p/pen/syedfard/baseband-tasks/baseband_tasks/base.py", line 385, in read
+    frame, sample_offset = self._get_frame(self.offset)
+  File "/home/p/pen/syedfard/baseband-tasks/baseband_tasks/base.py", line 420, in _get_frame
+    self._frame = self._read_frame(frame_index)
+  File "/home/p/pen/syedfard/baseband-tasks/baseband_tasks/integration.py", line 379, in _read_frame
+    return super()._read_frame(frame_index)
+  File "/home/p/pen/syedfard/baseband-tasks/baseband_tasks/integration.py", line 268, in _read_frame
+    self.ih.read(out=integrating_out)
+  File "/home/p/pen/syedfard/baseband-tasks/baseband_tasks/base.py", line 385, in read
+    frame, sample_offset = self._get_frame(self.offset)
+  File "/home/p/pen/syedfard/baseband-tasks/baseband_tasks/base.py", line 420, in _get_frame
+    self._frame = self._read_frame(frame_index)
+  File "/home/p/pen/syedfard/baseband-tasks/baseband_tasks/base.py", line 658, in _read_frame
+    data = self.ih.read(stop-start)
+  File "/home/p/pen/syedfard/baseband-tasks/baseband_tasks/base.py", line 385, in read
+    frame, sample_offset = self._get_frame(self.offset)
+  File "/home/p/pen/syedfard/baseband-tasks/baseband_tasks/base.py", line 420, in _get_frame
+    self._frame = self._read_frame(frame_index)
+  File "/home/p/pen/syedfard/baseband-tasks/baseband_tasks/base.py", line 658, in _read_frame
+    data = self.ih.read(stop-start)
+  File "/home/p/pen/syedfard/baseband-tasks/baseband_tasks/base.py", line 385, in read
+    frame, sample_offset = self._get_frame(self.offset)
+  File "/home/p/pen/syedfard/baseband-tasks/baseband_tasks/base.py", line 420, in _get_frame
+    self._frame = self._read_frame(frame_index)
+  File "/home/p/pen/syedfard/baseband-tasks/baseband_tasks/base.py", line 661, in _read_frame
+    return self.task(data)
+  File "/home/p/pen/syedfard/baseband-tasks/baseband_tasks/dispersion.py", line 132, in task
+    ft = self._fft(data)
+  File "/home/p/pen/syedfard/baseband-tasks/baseband_tasks/fourier/base.py", line 175, in __call__
+    return self._fft(a)
+  File "/home/p/pen/syedfard/baseband-tasks/baseband_tasks/fourier/numpy.py", line 41, in _rfft
+    return np.fft.rfft(a, axis=self.axis, norm=self._norm).astype(
+  File "<__array_function__ internals>", line 5, in rfft
+  File "/scinet/niagara/software/2019b/opt/base/python/3.8.5/lib/python3.8/site-packages/numpy-1.19.2-py3.8-linux-x86_64.egg/numpy/fft/_pocketfft.py", line 371, in rfft
+    output = _raw_fft(a, n, axis, True, True, inv_norm)
+  File "/scinet/niagara/software/2019b/opt/base/python/3.8.5/lib/python3.8/site-packages/numpy-1.19.2-py3.8-linux-x86_64.egg/numpy/fft/_pocketfft.py", line 77, in _raw_fft
+    r = pfi.execute(a, is_real, is_forward, fct)
+KeyboardInterrupt
+
+<class 'KeyboardInterrupt'>
