@@ -11,4 +11,4 @@ export OMP_NUM_THREADS=1
 
 source ~/.bashrc
 
-python ar_fold.py
+python ar_fold.py > /Users/fardinsyed/Desktop/PHY478/gk049e_baseband_reduction/logs/ar/test_log.txt
