@@ -7,10 +7,10 @@ import folding_pipeline as sr
 from baseband_tasks.shaping import Reshape
 import traceback
 
-fdir = '/scratch/p/pen/syedfard/B1133/gk049e/e-1133/ar/'
-name = sys.argv[1]
+fdir = '/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/baseband_data/ar/'
+fname = sys.argv[1]
 #fname = 'gk049e_ar_no0005.m5b'
-output_name = '/scratch/p/pen/syedfard/B1133/gk049e/numpy_arrays/ar' + fname[:-4]
+output_name = '/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/numpy_arrays/ar/' + fname[:-4]
 print("Output File Name: {}".format(output_name))
 
 # Load Data
@@ -18,7 +18,7 @@ frequency = np.array([[332.00], [332.00]]) * u.MHz
 sideband = np.array([[-1, -1], [1, 1]])
 polarization = ['R', 'L']   # Right circular polarization & left circular polarization
 dispersion_measure = 4.84066 * u.pc / u.cm**3
-polyco_file = '/scratch/p/pen/syedfard/B1133/gk049e/polycos/ar/polyco_new.dat'
+polyco_file = '/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/polycos/ar/polyco_new.dat'
 fullpol = False
 print("Parameters set")
 
