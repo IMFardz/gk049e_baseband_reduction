@@ -1,5 +1,6 @@
 import astropy.units as u
 from baseband import mark4
+from baseband_tasks.functions import Square
 from astropy.time import Time, TimeDelta
 import numpy as np
 import sys
@@ -43,8 +44,7 @@ WF = sr.Fold(rh, dispersion_measure, frequency, sideband, polyco_file, polarizat
 print("Initialized waterfall interpretor with shape:", WF.integrator.shape)
 
 # EXPERIMENTAL: Create stream writer.
-h5w = hdf5.open("/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/hdf5_files/ar/test.hdf5", 'w',
-                sample_shape=WF.sample_shape, samples_per_frame=WF.samples_per_frame)
+h5w = hdf5.open("/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/hdf5_files/ar/test.hdf5", 'w', template=WF.integrator)
 
 # Determine how many samples to output at a time. I reccomend 1.
 nsamples = WF.integrator.shape[0]
@@ -65,6 +65,8 @@ try:
         # EXPERIMENTAL: OUTPUT to hdf5 file
         current_time = WF.integrate_and_save(count=nsamples_per_output, output=h5w)
         print(current_time.yday)
+        print("Run-time so far: ", time.time() - runtime_start)
+        print()
 
         # sample, t = WF.integrate_and_save(count=nsamples_per_output)
         # print(t.yday)

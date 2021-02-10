@@ -49,7 +49,7 @@ class Fold:
         print('Starting at time {0}'.format(tstart.iso))
 
         # EXPERIMENTAL: USE hd5f file format:
-        output.read(count=count, out=self.h5w)
+        self.integrator.read(count=count, out=output)
 
         # ORIGINAL: USES NUMPY ARRAY AS OUTPUT
         # if output is None:
