@@ -39,7 +39,11 @@ class Fold:
             power = functions.Power(channelizer, polarization=self.polarization)
         else:
             power = functions.Square(channelizer, polarization=self.polarization)
+
+            
         integrator = integration.Fold(power, n_phase=1024, phase=psr_polyco, step=self.interval, start=self.start, average=True)
+        # Experimental: USE STACK INSTEAD OF FOLD
+        # integrator = integration.Stack(power, n_phase=1024, phase=psr_polyco, start=self.start, average=True)
 
         return integrator
 

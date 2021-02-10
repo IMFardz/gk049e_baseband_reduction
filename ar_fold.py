@@ -44,7 +44,8 @@ WF = sr.Fold(rh, dispersion_measure, frequency, sideband, polyco_file, polarizat
 print("Initialized waterfall interpretor with shape:", WF.integrator.shape)
 
 # EXPERIMENTAL: Create stream writer.
-h5w = hdf5.open("/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/hdf5_files/ar/test.hdf5", 'w', template=WF.integrator)
+h5w = hdf5.open("/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/hdf5_files/ar/" + fname[:-4] + ".hdf5", 'w', template=WF.integrator)
+print("Output File name: " + "/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/hdf5_files/ar/" + fname[:-4] + ".hdf5")
 
 # Determine how many samples to output at a time. I reccomend 1.
 nsamples = WF.integrator.shape[0]
