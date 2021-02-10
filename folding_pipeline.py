@@ -1,10 +1,10 @@
+"""
+Includes class objects for folding baseband data
+"""
 import astropy.units as u
-import astropy.constants as c
-from baseband import vdif, mark4
 from baseband_tasks import dm, dispersion, channelize, functions, integration, fourier
-from astropy.time import Time
-import numpy as np
 from pulsar import predictor
+from baseband_tasks.io import hdf5
 
 
 class Fold:
@@ -24,6 +24,7 @@ class Fold:
         self.interval = 10 * u.s  # Sub integration time interval
         self.start = start
         self.integrator = self.initialize_pipeline(fh)
+
 
     def initialize_pipeline(self, fh):
         """"Setup the dedisperser, produce intensities and return the integrator"""
@@ -46,11 +47,19 @@ class Fold:
         """Produces and outputs sample"""
         tstart = self.integrator.time
         print('Starting at time {0}'.format(tstart.iso))
-        if output is None:
-            print('reading out output array')
-            output = self.integrator.read(count=count)
-        else:
-            output = self.integrator.read(out=output)
+
+        # EXPERIMENTAL: USE hd5f file format:
+        output.read(count=count, out=self.h5w)
+
+        # ORIGINAL: USES NUMPY ARRAY AS OUTPUT
+        # if output is None:
+        #     print('reading out output array')
+        #     output = self.integrator.read(count=count)
+        # else:
+        #     output = self.integrator.read(out=output)
+
         # Note - calculating the time doesn't currently work for the
         # integrator if you are using bins in phase.
-        return output, tstart
+
+        #return output, tstart
+        return tstart

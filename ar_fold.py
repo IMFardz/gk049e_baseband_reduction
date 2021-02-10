@@ -5,12 +5,13 @@ import numpy as np
 import sys
 import folding_pipeline as sr
 from baseband_tasks.shaping import Reshape
+from baseband_tasks.io import hdf5
 import traceback
 import time
 
+# OS Things
 fdir = '/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/baseband_data/ar/'
 fname = sys.argv[1]
-#fname = 'gk049e_ar_no0005.m5b'
 output_name = '/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/numpy_arrays/ar/' + fname[:-4]
 print("Output File Name: {}".format(output_name))
 
@@ -28,13 +29,15 @@ fh = mark4.open(fdir + fname, 'rs', decade=2010)
 rh = Reshape(fh, (2, 2))
 dt = TimeDelta(10, format='sec')
 
+# EXPERIMENTAL: Create stream writer.
+h5w = hdf5.open("/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/hdf5_files/ar/test.hdf5", 'w')
+
 # Rounding Time
 start = Time(rh.time)
 start_time_str = start.iso.__str__()
 new_time = Time(start_time_str, precision = -1)
 new_time_str = new_time.iso.__str__()
 start_time = Time(new_time_str) + dt
-
 print("Opened stream reader with sample shape:", rh.sample_shape)
 print("Starting at time:", start_time)
 
@@ -53,22 +56,29 @@ runtime_start = time.time()
 
 # Loop through integrator, creating one time bin at a time
 try:
-    output, t = WF.integrate_and_save(count=1)
-    times.append(t)
-    counter = 1
+    # output, t = WF.integrate_and_save(count=nsamples_per_output)
+    # times.append(t)
+    # counter = 1
+
     while WF.integrator.tell() < nsamples - nsamples_per_output:
-        sample, t = WF.integrate_and_save(count=1)
-        print(t.yday)
-        times.append(t)
-        output = np.r_[output, sample]
-        counter += 1
+        # EXPERIMENTAL: OUTPUT to hdf5 file
+        current_time = WF.integrate_and_save(count=nsamples_per_output, output=h5w)
+        print(current_time.yday)
+
+        # sample, t = WF.integrate_and_save(count=nsamples_per_output)
+        # print(t.yday)
+        # times.append(t)
+        # output = np.r_[output, sample]
+        # counter += 1
 
     # Get the run-time
     runtime_end = time.time()
     runtime = runtime_end - runtime_start
     print("Run-Time For Program : {}".format(runtime))
 
-    np.savez(output_name, I=output, t=times, f=frequency)
+    # Save File
+    h5w.close()
+    #np.savez(output_name, I=output, t=times, f=frequency)
 except:
     print("Something went wrong. Likely, you inputted noise or too small of a sample set")
     print(traceback.format_exc())
@@ -78,4 +88,7 @@ except:
     runtime_end = time.time()
     runtime = runtime_end - runtime_start
     print("Run-Time For Program : {}".format(runtime))
-    np.savez(output_name, I=output, t=times, start=start_time)
+
+    # Same File
+    h5w.close()
+    # np.savez(output_name, I=output, t=times, start=start_time)
