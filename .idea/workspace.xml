@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ec3fb1cf-c247-46ee-8382-379e89e2b633" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/ar_fold.py" afterPath="$PROJECT_DIR$/ar_fold.py" />
-      <change beforePath="$PROJECT_DIR$/folding_pipeline.py" afterPath="$PROJECT_DIR$/folding_pipeline.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="ar_fold.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ar_fold.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="64" column="22" lean-forward="false" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+            <state relative-caret-position="257">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -329,8 +328,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ar_fold.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="64" column="22" lean-forward="false" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+        <state relative-caret-position="257">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
       </provider>

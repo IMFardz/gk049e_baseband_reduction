@@ -29,9 +29,6 @@ fh = mark4.open(fdir + fname, 'rs', decade=2010)
 rh = Reshape(fh, (2, 2))
 dt = TimeDelta(10, format='sec')
 
-# EXPERIMENTAL: Create stream writer.
-h5w = hdf5.open("/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/hdf5_files/ar/test.hdf5", 'w')
-
 # Rounding Time
 start = Time(rh.time)
 start_time_str = start.iso.__str__()
@@ -44,6 +41,10 @@ print("Starting at time:", start_time)
 # Initial waterfall interpretor
 WF = sr.Fold(rh, dispersion_measure, frequency, sideband, polyco_file, polarization, fullpol,start=start_time, nthreads=1)
 print("Initialized waterfall interpretor with shape:", WF.integrator.shape)
+
+# EXPERIMENTAL: Create stream writer.
+h5w = hdf5.open("/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/hdf5_files/ar/test.hdf5", 'w',
+                sample_shape=WF.sample_shape, samples_per_frame=WF.samples_per_frame)
 
 # Determine how many samples to output at a time. I reccomend 1.
 nsamples = WF.integrator.shape[0]
