@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec3fb1cf-c247-46ee-8382-379e89e2b633" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Fold_Arecibo.sh" afterPath="$PROJECT_DIR$/Fold_Arecibo.sh" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/ar_fold.py" afterPath="$PROJECT_DIR$/ar_fold.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,17 +44,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ar_fold.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ar_fold.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ar_fold.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="77" lean-forward="false" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
+            <state relative-caret-position="471">
+              <caret line="79" column="54" lean-forward="false" selection-start-line="79" selection-start-column="54" selection-end-line="79" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fold_Arecibo.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Fold_Arecibo.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Fold_Arecibo.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
@@ -99,8 +100,8 @@
         <option value="$PROJECT_DIR$/folding_pipeline.py" />
         <option value="$PROJECT_DIR$/archived_scripts/ar_reduction.py" />
         <option value="$PROJECT_DIR$/Test_Fold.sh" />
-        <option value="$PROJECT_DIR$/ar_fold.py" />
         <option value="$PROJECT_DIR$/Fold_Arecibo.sh" />
+        <option value="$PROJECT_DIR$/ar_fold.py" />
       </list>
     </option>
   </component>
@@ -356,18 +357,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ar_fold.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="77" lean-forward="false" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Fold_Arecibo.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="19" column="130" lean-forward="false" selection-start-line="19" selection-start-column="130" selection-end-line="19" selection-end-column="130" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ar_fold.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="79" column="54" lean-forward="false" selection-start-line="79" selection-start-column="54" selection-end-line="79" selection-end-column="54" />
           <folding />
         </state>
       </provider>

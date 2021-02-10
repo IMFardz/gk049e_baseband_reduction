@@ -6,6 +6,7 @@ import sys
 import folding_pipeline as sr
 from baseband_tasks.shaping import Reshape
 import traceback
+import time
 
 fdir = '/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/baseband_data/ar/'
 fname = sys.argv[1]
@@ -46,6 +47,10 @@ nsamples = WF.integrator.shape[0]
 nsamples_per_output = 1
 times = []
 
+# Start the timer
+print("Starting timer")
+runtime_start = time.time()
+
 # Loop through integrator, creating one time bin at a time
 try:
     output, t = WF.integrate_and_save(count=1)
@@ -58,9 +63,19 @@ try:
         output = np.r_[output, sample]
         counter += 1
 
+    # Get the run-time
+    runtime_end = time.time()
+    runtime = runtime_end - runtime_start
+    print("Run-Time For Program : {}".format(runtime))
+
     np.savez(output_name, I=output, t=times, f=frequency)
 except:
     print("Something went wrong. Likely, you inputted noise or too small of a sample set")
     print(traceback.format_exc())
     print(sys.exc_info()[0])
+
+    # Get the run-time
+    runtime_end = time.time()
+    runtime = runtime_end - runtime_start
+    print("Run-Time For Program : {}".format(runtime))
     np.savez(output_name, I=output, t=times, start=start_time)
