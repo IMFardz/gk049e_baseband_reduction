@@ -1,5 +1,5 @@
 """
-Script for reducing Jordell Bank data
+Script for reducing JB data
 """
 import astropy.units as u
 from baseband import vdif
@@ -15,7 +15,7 @@ import time
 # OS Things
 fdir = '/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/baseband_data/jb/'
 fname = sys.argv[1]
-output_name = '/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/numpy_arrays/jb/' + fname[:-4]
+output_name = '/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/numpy_arrays/jb/' + fname[:-5]
 print("Output File Name: {}".format(output_name))
 
 # Load Data
@@ -46,8 +46,8 @@ WF = sr.Fold(rh, dispersion_measure, frequency, sideband, polyco_file, polarizat
 print("Initialized waterfall interpretor with shape:", WF.integrator.shape)
 
 # EXPERIMENTAL: Create stream writer.
-h5w = hdf5.open("/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/hdf5_files/ar/" + fname[:-4] + ".hdf5", 'w', template=WF.integrator)
-print("Output File name: " + "/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/hdf5_files/ar/" + fname[:-4] + ".hdf5")
+h5w = hdf5.open("/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/hdf5_files/jb/" + fname[:-5] + ".hdf5", 'w', template=WF.integrator)
+print("Output File name: " + "/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/hdf5_files/jb/" + fname[:-5] + ".hdf5")
 
 # Determine how many samples to output at a time. I reccomend 1.
 nsamples = WF.integrator.shape[0]
@@ -74,7 +74,7 @@ try:
 
     # Save File
     h5w.close()
-    #np.savez(output_name, I=output, t=times, f=frequency)
+
 except:
     print("Something went wrong. Likely, you inputted noise or too small of a sample set")
     print(traceback.format_exc())

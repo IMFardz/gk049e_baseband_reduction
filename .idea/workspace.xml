@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec3fb1cf-c247-46ee-8382-379e89e2b633" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/jb_fold.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Fold_JB.sh" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/yy_fold.py" afterPath="$PROJECT_DIR$/yy_fold.py" />
+      <change beforePath="$PROJECT_DIR$/jb_fold.py" afterPath="$PROJECT_DIR$/jb_fold.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="yy_fold.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="yy_fold.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/yy_fold.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="17" column="99" lean-forward="false" selection-start-line="17" selection-start-column="99" selection-end-line="17" selection-end-column="99" />
+            <state relative-caret-position="184">
+              <caret line="20" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -38,8 +38,8 @@
       <file leaf-file-name="jb_fold.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jb_fold.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1">
-              <caret line="25" column="80" lean-forward="false" selection-start-line="25" selection-start-column="80" selection-end-line="25" selection-end-column="80" />
+            <state relative-caret-position="283">
+              <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -58,8 +58,18 @@
       <file leaf-file-name="Fold_VLA.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Fold_VLA.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+            <state relative-caret-position="120">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Fold_JB.sh" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Fold_JB.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="6" column="130" lean-forward="false" selection-start-line="6" selection-start-column="130" selection-end-line="6" selection-end-column="130" />
               <folding />
             </state>
           </provider>
@@ -89,6 +99,7 @@
       <find>predictor</find>
       <find>psr_polyco</find>
       <find>ar</find>
+      <find>yy</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -105,8 +116,9 @@
         <option value="$PROJECT_DIR$/folding_pipeline.py" />
         <option value="$PROJECT_DIR$/ar_fold.py" />
         <option value="$PROJECT_DIR$/Fold_VLA.sh" />
-        <option value="$PROJECT_DIR$/jb_fold.py" />
         <option value="$PROJECT_DIR$/yy_fold.py" />
+        <option value="$PROJECT_DIR$/jb_fold.py" />
+        <option value="$PROJECT_DIR$/Fold_JB.sh" />
       </list>
     </option>
   </component>
@@ -378,22 +390,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Fold_VLA.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="42" lean-forward="false" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jb_fold.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="25" column="80" lean-forward="false" selection-start-line="25" selection-start-column="80" selection-end-line="25" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ar_fold.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-253">
@@ -404,8 +400,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yy_fold.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="17" column="99" lean-forward="false" selection-start-line="17" selection-start-column="99" selection-end-line="17" selection-end-column="99" />
+        <state relative-caret-position="184">
+          <caret line="20" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jb_fold.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fold_VLA.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fold_JB.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="6" column="130" lean-forward="false" selection-start-line="6" selection-start-column="130" selection-end-line="6" selection-end-column="130" />
           <folding />
         </state>
       </provider>
