@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec3fb1cf-c247-46ee-8382-379e89e2b633" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ef_fold.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Fold_WB.sh" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/wb_fold.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Fold_JB.sh" afterPath="$PROJECT_DIR$/Fold_JB.sh" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,18 +38,28 @@
       <file leaf-file-name="jb_fold.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jb_fold.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="835">
-              <caret line="82" column="22" lean-forward="true" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+            <state relative-caret-position="205">
+              <caret line="41" column="19" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ef_fold.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="wb_fold.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wb_fold.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="49" column="98" lean-forward="false" selection-start-line="49" selection-start-column="98" selection-end-line="49" selection-end-column="98" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ef_fold.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ef_fold.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+            <state relative-caret-position="277">
+              <caret line="70" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -58,8 +68,18 @@
       <file leaf-file-name="Fold_EF.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Fold_EF.sh">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Fold_WB.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Fold_WB.sh">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="6" column="137" lean-forward="false" selection-start-line="6" selection-start-column="137" selection-end-line="6" selection-end-column="137" />
+              <caret line="6" column="130" lean-forward="false" selection-start-line="6" selection-start-column="130" selection-end-line="6" selection-end-column="130" />
               <folding />
             </state>
           </provider>
@@ -142,6 +162,8 @@
         <option value="$PROJECT_DIR$/ef_fold.py" />
         <option value="$PROJECT_DIR$/Fold_JB.sh" />
         <option value="$PROJECT_DIR$/Fold_EF.sh" />
+        <option value="$PROJECT_DIR$/wb_fold.py" />
+        <option value="$PROJECT_DIR$/Fold_WB.sh" />
       </list>
     </option>
   </component>
@@ -441,14 +463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jb_fold.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="835">
-          <caret line="82" column="22" lean-forward="true" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Fold_JB.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -465,18 +479,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Fold_EF.sh">
+    <entry file="file://$PROJECT_DIR$/jb_fold.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="6" column="137" lean-forward="false" selection-start-line="6" selection-start-column="137" selection-end-line="6" selection-end-column="137" />
+        <state relative-caret-position="205">
+          <caret line="41" column="19" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ef_fold.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+        <state relative-caret-position="277">
+          <caret line="70" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fold_EF.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Fold_WB.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="6" column="130" lean-forward="false" selection-start-line="6" selection-start-column="130" selection-end-line="6" selection-end-column="130" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wb_fold.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="49" column="98" lean-forward="false" selection-start-line="49" selection-start-column="98" selection-end-line="49" selection-end-column="98" />
           <folding />
         </state>
       </provider>
