@@ -1,5 +1,5 @@
 """
-Script for reducing VLA data
+Script for reducing Jordell Bank data
 """
 import astropy.units as u
 from baseband import vdif
@@ -13,17 +13,17 @@ import traceback
 import time
 
 # OS Things
-fdir = '/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/baseband_data/Yy/'
+fdir = '/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/baseband_data/jb/'
 fname = sys.argv[1]
-output_name = '/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/numpy_arrays/yy/' + fname[:-5]
+output_name = '/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/numpy_arrays/jb/' + fname[:-4]
 print("Output File Name: {}".format(output_name))
 
 # Load Data
-frequency = np.array([[316.00], [332.00]]) * u.MHz
-sideband = np.array([[1, 1], [1, 1]])
+frequency = np.array([[332.00], [332.00]]) * u.MHz
+sideband = np.array([[-1, -1], [1, 1]])
 polarization = ['R', 'L']   # Right circular polarization & left circular polarization
 dispersion_measure = 4.84066 * u.pc / u.cm**3
-polyco_file = '/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/polycos/yy/polyco_new.dat'
+polyco_file = '/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/polycos/jb/polyco_new.dat'
 fullpol = False
 print("Parameters set")
 
@@ -46,8 +46,8 @@ WF = sr.Fold(rh, dispersion_measure, frequency, sideband, polyco_file, polarizat
 print("Initialized waterfall interpretor with shape:", WF.integrator.shape)
 
 # EXPERIMENTAL: Create stream writer.
-h5w = hdf5.open("/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/hdf5_files/yy/" + fname[:-5] + ".hdf5", 'w', template=WF.integrator)
-print("Output File name: " + "/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/hdf5_files/yy/" + fname[:-5] + ".hdf5")
+h5w = hdf5.open("/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/hdf5_files/ar/" + fname[:-4] + ".hdf5", 'w', template=WF.integrator)
+print("Output File name: " + "/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/hdf5_files/ar/" + fname[:-4] + ".hdf5")
 
 # Determine how many samples to output at a time. I reccomend 1.
 nsamples = WF.integrator.shape[0]
