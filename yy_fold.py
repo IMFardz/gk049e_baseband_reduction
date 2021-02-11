@@ -28,7 +28,7 @@ fullpol = False
 print("Parameters set")
 
 # Creating stream reader. For other formats, such as vdif, use vdif.open(...)
-fh = vdif.open(fdir + fname, 'rs', decade=2010)
+fh = vdif.open(fdir + fname, 'rs')
 rh = Reshape(fh, (2, 2))
 dt = TimeDelta(10, format='sec')
 
