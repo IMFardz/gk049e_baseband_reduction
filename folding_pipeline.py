@@ -34,13 +34,13 @@ class Fold:
         # Build the pipeline
         dedisperser = dispersion.Dedisperse(fh, dispersion_measure, 327*u.MHz,
                                             frequency=self.frequency, sideband=self.sideband)
-        channelizer = channelize.Channelize(dedisperser, 4096, frequency=self.frequency, sideband=self.sideband)
+        channelizer = channelize.Channelize(dedisperser, 512, frequency=self.frequency, sideband=self.sideband)
         if self.fullpol:
             power = functions.Power(channelizer, polarization=self.polarization)
         else:
             power = functions.Square(channelizer, polarization=self.polarization)
 
-            
+
         integrator = integration.Fold(power, n_phase=1024, phase=psr_polyco, step=self.interval, start=self.start, average=True)
         # Experimental: USE STACK INSTEAD OF FOLD
         # integrator = integration.Stack(power, n_phase=1024, phase=psr_polyco, start=self.start, average=True)
