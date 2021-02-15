@@ -4,7 +4,7 @@ export OMP_NUM_THREADS=32           # Number of cores in mussel. If using lobste
 
 source ~/.bashrc
 
-python yy_fold.py gk049e_Yy_scan51.vdif > /mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/gk049e_baseband_reduction/logs/yy/scan51.log
+#python yy_fold.py gk049e_Yy_scan51.vdif > /mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/gk049e_baseband_reduction/logs/yy/scan51.log
 
 python yy_fold.py gk049e_Yy_scan05.vdif > /mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/gk049e_baseband_reduction/logs/yy/scan05.log
 
@@ -24,7 +24,7 @@ python yy_fold.py gk049e_Yy_scan33.vdif > /mnt/scratch-lustre/fsyed/B1133+16/Ana
 
 python yy_fold.py gk049e_Yy_scan35.vdif > /mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/gk049e_baseband_reduction/logs/yy/scan35.log
 
-python yy_fold.py gk049e_Yy_scan42.vdif > /mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/gk049e_baseband_reduction/logs/yy/scan42.log
+#python yy_fold.py gk049e_Yy_scan42.vdif > /mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/gk049e_baseband_reduction/logs/yy/scan42.log
 
 python yy_fold.py gk049e_Yy_scan44.vdif > /mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/gk049e_baseband_reduction/logs/yy/scan44.log
 
