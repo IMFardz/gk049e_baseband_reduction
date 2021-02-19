@@ -20,7 +20,10 @@ print("Output File Name: {}".format(output_name))
 
 # Load Data
 frequency = np.array([[332.00], [332.00]]) * u.MHz
-sideband = np.array([[-1, -1], [1, 1]])
+
+# NOTE: Sideband should be [[-1,-1], [1,1]] according to .vex file. Data did not turn our great however so I am looking into it.  
+sideband = np.array([[1, 1], [-1, -1]])
+
 polarization = ['R', 'L']   # Right circular polarization & left circular polarization
 dispersion_measure = 4.84066 * u.pc / u.cm**3
 polyco_file = '/mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/polycos/ef/polyco_new.dat'
