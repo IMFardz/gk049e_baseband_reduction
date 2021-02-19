@@ -11,7 +11,7 @@ export OMP_NUM_THREADS=32           # Number of cores in mussel. If using lobste
 
 source ~/.bashrc
 
-python ar_fold.py gk049e_ar_no0005.m5b > /mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/gk049e_baseband_reduction/logs/ar/no0005.log
+#python ar_fold.py gk049e_ar_no0005.m5b > /mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/gk049e_baseband_reduction/logs/ar/no0005.log
 
 python ar_fold.py gk049e_ar_no0004.m5b > /mnt/scratch-lustre/fsyed/B1133+16/Analysis2020/gk049e/gk049e_baseband_reduction/logs/ar/no0004.log
 
